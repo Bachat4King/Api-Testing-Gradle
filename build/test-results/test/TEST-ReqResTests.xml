@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ReqResTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-12-27T07:55:31" hostname="CL-IT01415" time="4.133">
+  <properties/>
+  <testcase name="deleteUserTest" classname="ReqResTests" time="1.972"/>
+  <testcase name="getSingleUserTest" classname="ReqResTests" time="0.637"/>
+  <testcase name="loginTest" classname="ReqResTests" time="0.513"/>
+  <testcase name="patchUserTest" classname="ReqResTests" time="0.502"/>
+  <testcase name="putUserTest" classname="ReqResTests" time="0.506"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

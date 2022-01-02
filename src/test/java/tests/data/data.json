@@ -1,0 +1,19 @@
+{
+   "data":[
+        {
+          "id:":1,
+          "name": "morpheus",
+          "job": "zion resident"
+        },
+        {
+          "id":2,
+          "name": "neo",
+          "job": "matrix agent"
+        },
+        {
+          "id":3,
+          "name": "trinity",
+          "job": "mortal"
+        }
+      ]
+}
