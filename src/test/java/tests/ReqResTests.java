@@ -1,57 +1,37 @@
 package tests;
 
-import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.http.ContentType;
 import org.apache.http.HttpStatus;
-import org.apache.http.ParseException;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import tests.data.CreateUserRequest;
+import tests.data.CreateUserResponse;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.notNullValue;
 
-public class ReqResTests {
-
-
-    @BeforeTest
-    public void setUp(){
-        RestAssured.baseURI = "https://reqres.in";
-        RestAssured.basePath = "/api";
-        //RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
-        RestAssured.requestSpecification = new RequestSpecBuilder()
-                .setContentType(ContentType.JSON).build();
-    }
+public class ReqResTests extends BaseTest{
 
     @Test
     public void postLoginTest() {
         given()
-        .body("{\n" +
-                "    \"email\": \"eve.holt@reqres.in\",\n" +
-                "    \"password\": \"cityslicka\"\n" +
-                "}")
-        .post("login")
-        .then()
-        .statusCode(HttpStatus.SC_OK)
-        .body("token", notNullValue());
+                .body("{\n" +
+                        "    \"email\": \"eve.holt@reqres.in\",\n" +
+                        "    \"password\": \"cityslicka\"\n" +
+                        "}")
+                .post("login")
+                .then()
+                .statusCode(HttpStatus.SC_OK)
+                .body("token", notNullValue());
     }
 
     @Test
     public void getSingleUserTest(){
         given()
-        .get("users/2")
-        .then()
-        .statusCode(HttpStatus.SC_OK)
-        .body("data.id", equalTo(2));
+                .get("users/2")
+                .then()
+                .statusCode(HttpStatus.SC_OK)
+                .body("data.id", equalTo(2));
     }
 
     @Test
@@ -77,12 +57,12 @@ public class ReqResTests {
                 .extract()
                 .jsonPath().getString("name");
 
-                assertThat(nameUpdated, equalTo("morpheus"));
+        assertThat(nameUpdated, equalTo("morpheus"));
     }
 
     @Test
     public void putUserTest() {
-       String job =  given()
+        String job =  given()
                 .when()
                 .body("{\n" +
                         "    \"name\": \"morpheus\",\n" +
@@ -95,6 +75,27 @@ public class ReqResTests {
                 .jsonPath().getString("job");
 
         assertThat(job, equalTo("zion resident"));
+    }
+
+    @Test
+    public void createUser(){
+        CreateUserRequest user = new CreateUserRequest();
+        user.setEmail("eve.holt@reqres.in");
+        user.setPassword("pistol");
+
+        CreateUserResponse userResponse = given()
+                .when()
+                .body(user)
+                .post("register")
+                .then()
+                .statusCode(200)
+                .contentType(equalTo("application/json; charset=utf-8"))
+                .extract()
+                .body()
+                .as(CreateUserResponse.class);
+
+        assertThat(userResponse.getId(), equalTo(4));
+        assertThat(userResponse.getToken(), notNullValue());
     }
 
 }
