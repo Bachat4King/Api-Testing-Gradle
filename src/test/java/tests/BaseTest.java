@@ -7,7 +7,7 @@ import io.restassured.specification.RequestSpecification;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.BeforeClass;
-
+import utils.ConfVariables;
 
 
 public abstract class BaseTest {
@@ -22,8 +22,8 @@ public abstract class BaseTest {
     }
 
     public static RequestSpecification defaultRequestSpecification() {
-        return new RequestSpecBuilder().setBaseUri("https://reqres.in")
-                .setBasePath("api/")
+        return new RequestSpecBuilder().setBaseUri(ConfVariables.getHost())
+                .setBasePath(ConfVariables.getPath())
                 .setContentType(ContentType.JSON).build();
     }
 

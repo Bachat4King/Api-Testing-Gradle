@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.ReqResTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-31T07:22:41" hostname="CL-IT01415" time="1.934">
+  <properties/>
+  <testcase name="createUser" classname="tests.ReqResTests" time="1.934"/>
+  <system-out><![CDATA[2022-01-31T04:22:40,675 [Test worker] INFO  (BaseTest.java:19) - Setting up the base test
+2022-01-31T04:22:41,212 [Test worker] INFO  (ApplicationProperties.java:31) - Property file to read application-dev.properties
+2022-01-31T04:22:41,239 [Test worker] INFO  (BaseTest.java:21) - Base test setup complete
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
