@@ -1,3 +1,21 @@
-2022-01-31T04:22:40,675 [Test worker] INFO  (BaseTest.java:19) - Setting up the base test
-2022-01-31T04:22:41,212 [Test worker] INFO  (ApplicationProperties.java:31) - Property file to read application-dev.properties
-2022-01-31T04:22:41,239 [Test worker] INFO  (BaseTest.java:21) - Base test setup complete
+2022-02-21T14:30:41,296 [Test worker] INFO  (BaseTest.java:25) - Setting up the base test
+2022-02-21T14:30:41,864 [Test worker] INFO  (ApplicationProperties.java:31) - Property file to read application-dev.properties
+2022-02-21T14:30:41,902 [Test worker] INFO  (BaseTest.java:27) - Base test setup complete
+2022-02-21T14:37:15,205 [Test worker] INFO  (BaseTest.java:27) - Setting up the base test
+2022-02-21T14:37:16,027 [Test worker] INFO  (ApplicationProperties.java:31) - Property file to read application-dev.properties
+2022-02-21T14:37:16,091 [Test worker] INFO  (BaseTest.java:29) - Base test setup complete
+2022-02-21T14:37:42,296 [Test worker] INFO  (BaseTest.java:27) - Setting up the base test
+2022-02-21T14:37:43,096 [Test worker] INFO  (ApplicationProperties.java:31) - Property file to read application-dev.properties
+2022-02-21T14:37:43,156 [Test worker] INFO  (BaseTest.java:29) - Base test setup complete
+2022-02-21T14:40:37,811 [Test worker] INFO  (BaseTest.java:27) - Setting up the base test
+2022-02-21T14:40:38,632 [Test worker] INFO  (ApplicationProperties.java:31) - Property file to read application-dev.properties
+2022-02-21T14:40:38,690 [Test worker] INFO  (BaseTest.java:29) - Base test setup complete
+2022-02-21T14:42:31,495 [Test worker] INFO  (BaseTest.java:27) - Setting up the base test
+2022-02-21T14:42:32,464 [Test worker] INFO  (ApplicationProperties.java:31) - Property file to read application-dev.properties
+2022-02-21T14:42:32,560 [Test worker] INFO  (BaseTest.java:29) - Base test setup complete
+2022-02-21T15:02:09,015 [Test worker] INFO  (BaseTest.java:27) - Setting up the base test
+2022-02-21T15:02:09,959 [Test worker] INFO  (ApplicationProperties.java:31) - Property file to read application-dev.properties
+2022-02-21T15:02:10,028 [Test worker] INFO  (BaseTest.java:29) - Base test setup complete
+2022-02-21T15:11:52,107 [Test worker] INFO  (BaseTest.java:27) - Setting up the base test
+2022-02-21T15:11:53,057 [Test worker] INFO  (ApplicationProperties.java:31) - Property file to read application-dev.properties
+2022-02-21T15:11:53,129 [Test worker] INFO  (BaseTest.java:29) - Base test setup complete
